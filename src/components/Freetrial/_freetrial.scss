@@ -1,0 +1,32 @@
+.freetrial {
+  &-wrp {
+    background-image: url(../../../public/images/png/freetrialbackgound.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 100px 80px;
+  }
+  &-info {
+    @include font(400, 18, 1.5);
+    color: $grey-60;
+  }
+  @include media(680px) {
+    &-wrp {
+      flex-direction: column;
+      text-align: center;
+      padding: 60px 80px;
+    }
+  }
+  @include media(504px) {
+    &-wrp {
+      padding: 60px 4px;
+    }
+    &-title {
+      @include font(700, 24, 1.5);
+      margin-bottom: 10px;
+    }
+    &-info {
+      @include font(400, 14, 1.5);
+    }
+  }
+}

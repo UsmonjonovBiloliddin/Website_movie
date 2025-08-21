@@ -1,0 +1,34 @@
+// Абстракции
+@import "./abstracts/variables";
+@import "./abstracts/mixin";
+
+// Вендоры (normalize.css)
+@import "./vendors/normalize";
+
+// Базовые стили
+@import "./base/resets";
+@import "./base/typography";
+
+// Компоненты
+@import "./components/buttons";
+@import "./components/Navbar/navbar";
+@import "./components/Accardion/accardion";
+@import "./components/Freetrial/freetrial";
+@import "./components/Plan/plan";
+@import "./components/Slider/slider";
+@import "./components/Scroll/scroll";
+@import "./components/Sidebar/sidebar";
+
+// Layout
+@import "./layout/forms";
+@import "./layout/header";
+@import "./layout/footer";
+
+// Страницы
+@import "./pages/Home/home";
+@import "./pages/Support/support";
+@import "./pages/Film/film";
+@import "./pages/Movies/movies";
+@import "./pages/Actor/actor";
+@import "./pages/Login/login";
+@import "./pages/Search/search";

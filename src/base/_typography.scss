@@ -1,0 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&display=swap");
+body {
+  font-family: "Manrope";
+  @include font(500, 18, 1.5);
+  color: $white;
+  background-color: $black-08;
+}
+h1 {
+  @include font(700, 28, 1.5);
+}
+h2 {
+  @include font(700, 28, 1.5);
+}

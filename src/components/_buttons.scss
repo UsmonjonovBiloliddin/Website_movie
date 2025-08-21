@@ -1,0 +1,84 @@
+button {
+  color: $white;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-shrink: 0;
+}
+.burger-btn {
+  background-color: $black-10;
+  padding: 12px;
+  border: 3px $black-15 solid;
+  border-radius: 6px;
+  display: none;
+}
+.btn {
+  @include font(600, 14, 1.5);
+  background-color: $red-45;
+  padding: 14px 24px;
+  border-radius: 8px;
+  height: 49px;
+  flex-shrink: 0;
+}
+.footer-btn {
+  background-color: $black-10;
+  padding: 5px;
+  border-radius: 8px;
+  border: 1px $black-15 solid;
+  transition: all 0.3s;
+  &:hover {
+    background-color: $red-60;
+    border-color: $grey-90;
+  }
+}
+.change-countie {
+  background-color: $black-08;
+  border: 1px $black-15 solid;
+  border-radius: 6px;
+  padding: 14.5px 8px;
+  transition: all 0.3s;
+  &:hover {
+    border-color: $red-45;
+  }
+}
+.selected-country {
+  width: 38px;
+  height: 24px;
+  border-radius: 2px;
+}
+.change-arrow {
+  transition: all 0.3s;
+}
+.rotated {
+  transform: rotate(180deg);
+}
+.grey-btn {
+  background-color: $black-08;
+  border: 1px $black-15 solid;
+  padding: 18px 35px;
+  border-radius: 8px;
+  @include font(600, 14, 1.5);
+
+  transition: all 0.3s;
+  &:hover {
+    background-color: $red-45;
+  }
+}
+.red-btn {
+  background-color: $red-45;
+  padding: 18px 35px;
+  border-radius: 8px;
+  @include font(600, 14, 1.5);
+}
+.btn-search {
+  @include font(600, 14, 1.5);
+  background-color: $red-45;
+  padding: 16px 27px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+@include media(1440px) {
+  .grey-btn,
+  .red-btn {
+  }
+}

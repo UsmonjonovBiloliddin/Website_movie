@@ -1,0 +1,158 @@
+.support {
+  &-right {
+    background-color: $black-06;
+    border-radius: 12px;
+    border: 1px $black-15 solid;
+    padding: 40px;
+    max-width: 800px;
+    width: 100%;
+  }
+  &-img {
+    height: auto;
+    max-width: 100%;
+  }
+  &-info {
+    @include font(400, 18, 1.5);
+    color: $grey-60;
+  }
+  &-name {
+    @include font(600, 16, 1.5);
+    margin-bottom: 12px;
+  }
+  &-checkbox-label {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 8px;
+
+    .support-checkbox {
+      display: none;
+    }
+
+    .custom-checkbox {
+      width: 24px;
+      height: 24px;
+      border: 1px solid $black-15;
+      background-color: $black-06;
+      border-radius: 4px;
+      transition: all 0.3s;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &::after {
+        content: "";
+        display: none;
+        width: 6px;
+        height: 12px;
+        border: solid white;
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+      }
+    }
+
+    .support-checkbox:checked + .custom-checkbox {
+      background-color: $red-45;
+      border-color: $white;
+
+      &::after {
+        display: block;
+      }
+    }
+  }
+  &-input {
+    @include font(400, 14, 1.5);
+    background-color: $black-08;
+    border: 1px $black-15 solid;
+    color: $white;
+    border-radius: 6px;
+    padding: 16px;
+    outline: none;
+    transition: all 0.3s;
+    outline: none;
+    &:hover {
+      border-color: $red-45;
+    }
+    &:focus {
+      outline: 1px $red-45 solid;
+    }
+    ::placeholder {
+      color: $grey-60;
+    }
+  }
+
+  &-message {
+    padding-bottom: 92px;
+  }
+  .select-country {
+    overflow-x: auto;
+    display: flex;
+
+    gap: 15px;
+    border-radius: 6px;
+    overflow-y: hidden;
+    height: 0px;
+    padding: 0;
+    border: none;
+    transition: all 0.3s;
+    &.show {
+      height: auto;
+      background-color: $black-08;
+      border: 1px $black-15 solid;
+      padding: 16px;
+      &:hover {
+        border-color: $red-45;
+      }
+    }
+  }
+  .country {
+    cursor: pointer;
+    img {
+      transition: all 0.3s;
+    }
+    &:hover {
+      img {
+        border: 1px $red-45 solid;
+        transform: scale(1.3);
+      }
+    }
+  }
+  @include media(528px) {
+    &-checkbox-wrp {
+      flex-direction: column;
+    }
+  }
+  @include media(615px) {
+    &-mid {
+      flex-direction: column;
+    }
+  }
+  @include media(1200px) {
+    &-container {
+      flex-direction: column;
+      align-items: center;
+    }
+    &-left {
+      margin-right: auto;
+      display: none;
+    }
+    &-right {
+      padding: 30px;
+      max-width: 100%;
+    }
+  }
+  @include media(1440px) {
+    &-right {
+    }
+    &-title {
+      @include font(700, 38, 1.5);
+    }
+    &-info {
+      @include font(400, 14, 1.5);
+    }
+    &-left {
+      max-width: 429px;
+    }
+  }
+}

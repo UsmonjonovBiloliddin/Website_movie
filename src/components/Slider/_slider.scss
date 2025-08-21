@@ -1,0 +1,94 @@
+.nav-btn {
+  padding: 7px;
+  border: 1px $black-12 solid;
+  border-radius: 8px;
+  background-color: $black-10;
+  img {
+    transition: all 0.3s;
+  }
+  &:hover {
+    img {
+      transform: scale(1.1);
+    }
+  }
+}
+.next-btn {
+  &:hover {
+    img {
+      transform: scale(1.1) rotate(180deg);
+    }
+  }
+  img {
+    transform: rotate(180deg);
+  }
+}
+.nav-wrp {
+  background-color: $black-06;
+  border: 1px $black-12 solid;
+  border-radius: 12px;
+  padding: 7px;
+}
+.my-pagination {
+  display: flex;
+  gap: 3px;
+  justify-content: center;
+  align-items: center;
+}
+
+.my-pagination .swiper-pagination-bullet {
+  width: 14px;
+  height: 4px;
+  background-color: $black-20;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  opacity: 1;
+}
+
+.my-pagination .swiper-pagination-bullet-active {
+  background-color: $red-45;
+  width: 18px;
+}
+.swiper {
+  width: 100%;
+  .swiperSlide {
+    width: 100%;
+      border-radius: 7px;
+      background-color: #1e1e1e98;
+      padding: 10px;
+
+    .slider-img-wrapper {
+      position: relative;
+      width: 100%;
+
+      img {
+        width: 100%;
+        height: 320px;
+        object-fit: cover;
+        border-radius: 12px;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 60%;
+        background: linear-gradient(0deg, #141414 0%, rgba(20, 20, 20, 0) 100%);
+        pointer-events: none;
+        border-radius: 12px;
+        opacity: 1;
+        transition: opacity 0.3s ease;
+      }
+      &:hover::after {
+        opacity: 0;
+      }
+    }
+  }
+  
+}
+
+@include media(920px) {
+  .my-pagination {
+    display: none;
+  }
+}

@@ -1,0 +1,48 @@
+.footer {
+  background-color: $black-06;
+  padding: 50px 0px 25px 0px;
+  &-title {
+    @include font(600, 20, 1.5);
+  }
+  &-link {
+    @include font(500, 16, 1.5);
+    color: $grey-60;
+    transition: all 0.3s;
+    &:hover {
+      color: $red-45;
+      transform: scale(1.1);
+    }
+  }
+  &-line {
+    width: 1px;
+    height: 27px;
+    background-color: $black-15;
+  }
+  &-bottom {
+    &-text {
+      cursor: pointer;
+      @include font(400, 16, 1.5);
+      color: $grey-60;
+      transition: all 0.3s;
+      &:hover {
+        color: $red-45;
+      }
+    }
+  }
+}
+@include media(773px) {
+  .footer-bottom {
+    flex-direction: column;
+    gap: 25px;
+  }
+}
+@include media(460px) {
+  .footer-right {
+    flex-direction: column;
+    width: 100%;
+  }
+  .footer-line {
+    height: 1px;
+    width: 100%;
+  }
+}

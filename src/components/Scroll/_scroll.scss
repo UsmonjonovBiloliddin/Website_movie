@@ -1,0 +1,25 @@
+.scroll {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  padding: 12px;
+  border-radius: 32px;
+  background-color: $black-06;
+  border: 3px $black-12 solid;
+  transition: all 0.3s;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6px);
+  opacity: 0;
+  z-index: 999;
+  &.site-scrolled {
+    opacity: 1;
+  }
+  &:hover {
+    background-color: $red-45;
+    border-color: $grey-75;
+    box-shadow: 0 0 12px rgba(255, 0, 0, 0.6);
+  }
+  &-img {
+    transform: rotate(90deg);
+  }
+}

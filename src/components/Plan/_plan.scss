@@ -1,0 +1,41 @@
+.plan {
+  .sitenav {
+    background-color: red;
+  }
+  &-name {
+    @include font(700, 20, 1.5);
+  }
+  &-info {
+    @include font(400, 16, 1.5);
+    color: $grey-60;
+  }
+  &-card {
+    padding: 25px;
+    background-color: $black-10;
+    border: 1px $black-15 solid;
+    border-radius: 10px;
+    max-width: 413px;
+  }
+  @include media(790px) {
+    &-top {
+      flex-direction: column;
+    }
+  }
+  @include media(750px) {
+    &-top {
+      nav {
+        display: flex;
+      }
+    }
+  }
+
+  &-link {
+    @include font(500, 18, 1.5);
+    background: none;
+    transition: all 0.3s;
+    &.open {
+      background-color: $black-12;
+      padding: 10px 20px;
+    }
+  }
+}

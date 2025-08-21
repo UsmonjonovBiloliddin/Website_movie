@@ -1,0 +1,77 @@
+.slider {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -2;
+  height: 100%;
+}
+
+.slider::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  display: block;
+  background: linear-gradient(180deg, rgba(20, 20, 20, 0) 0%, #141414 100%);
+  z-index: 3;
+  pointer-events: none;
+}
+
+.slider::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  display: block;
+  background: linear-gradient(180deg, rgba(20, 20, 20, 0) 0%, #141414 100%);
+  z-index: 3;
+  pointer-events: none;
+  transform: rotate(180deg);
+}
+.hero-info {
+  @include font(400, 14, 1.5);
+  color: $grey-60;
+  max-width: 1140px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+.poster-img {
+  border-radius: 12px;
+}
+@include media(670px) {
+  .logo-hero {
+    width: 250px;
+    height: 250px;
+  }
+}
+@include media(427px) {
+  .logo-hero {
+    width: 200px;
+    height: 200px;
+  }
+}
+@include media(430px) {
+  h1 {
+    @include font(700, 22, 1.2);
+  }
+}
+@include media(350px) {
+  h1 {
+    @include font(700, 18, 1.2);
+  }
+}
+@include media(340px) {
+  h1 {
+    @include font(700, 16, 1.2);
+  }
+}
+
+@include minmedia(1517px) {
+  .slider {
+    gap: 15px;
+  }
+  .morque-img {
+    width: 201px;
+    height: 250px;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+}
