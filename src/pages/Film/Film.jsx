@@ -72,16 +72,16 @@ const Film = () => {
       `https://api.themoviedb.org/3/movie/${id}`
     );
     setMovie(getMovie);
-    const getTrailer = await Api_Service.getData(
-      `https://api.themoviedb.org/3/movie/${id}/videos`
-    );
-    const filteredTrailer = getTrailer.results.find(
-      (e) => e.type == "Trailer" && e.site == "YouTube"
-    );
-    setTrailer(filteredTrailer.key);
-    const getActors = await Api_Service.getData(
-      `https://api.themoviedb.org/3/movie/${id}/credits`
-    );
+      const getTrailer = await Api_Service.getData(
+        `https://api.themoviedb.org/3/movie/${id}/videos`
+      );
+      const filteredTrailer = getTrailer.results.find(
+        (e) => e.type == "Trailer" && e.site == "YouTube"
+      );
+      setTrailer(filteredTrailer.key);
+      const getActors = await Api_Service.getData(
+        `https://api.themoviedb.org/3/movie/${id}/credits`
+      );
     setActors(getActors.cast);
     const filtrDirector = getActors.crew.find((e) => e.job == "Director");
     setDirector(filtrDirector);
